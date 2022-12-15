@@ -27,23 +27,16 @@ function readLine() {
  */
 
 function staircase(n) {
-let n = 3;// n is the sample input
-let arr = "";
-let arr1 = " ";
-let col = n;
 
-for(let i = 1; i <= n; i++) {
-    for(let j = 1; j <= col-1; j++) {
-        arr = arr1 + arr;
-        }
-    
-        for(let j = 1; j <= i; j++){
-            arr = arr+"#";
-        }
-        console.log(arr);
-        arr = "";
-        col--;
+for(let i = 1 ; i <= n ; i++){
+    for(let j = 1 ; j <= n - i ; j++){
+        process.stdout.write(' ');
     }
+    for(let j = 1 ; j <= i ; j++){
+        process.stdout.write('#');
+    }
+    process.stdout.write('\n');
+}
 }
 
 function main() {
